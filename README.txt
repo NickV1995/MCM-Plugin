@@ -1,5 +1,4 @@
-# MCM-Plugin
-
+=== Muziekcentrum Middelburg plugin ===
 Contributors: Nick Vinke
 Tags: Barcode printing
 Requires at least: 4.0.1
