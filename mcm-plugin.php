@@ -27,5 +27,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 * Check if WooCommerce is active
 **/
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-// Put your plugin code here
+  function woo_add_custom_general_fields() {
+
+    global $woocommerce, $post;
+    
+    echo '<div class="options_group">';
+    
+    // Text Field
+woocommerce_wp_text_input( 
+	array( 
+		'id'          => '_text_field', 
+		'label'       => __( 'Inkoopprijs', 'woocommerce' ), 
+		'desc_tip'    => 'true',
+		'description' => __( 'De inkoopprijs van het product', 'woocommerce' ) 
+	)
+);
+    
+    echo '</div>';
+    
+  }
 }
+?>
